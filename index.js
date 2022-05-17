@@ -18,10 +18,10 @@ let allowCrossDomain = function (req, res, next) {
 };
 
 app.use(allowCrossDomain);
-app.get("/", (req, res) => {
-  res.send("contact done");
-});
-app.use("/contact", contactRouter); //no log
+// app.get("/", (req, res) => {
+//   res.send("contact done");
+// });
+app.use("/", contactRouter); //no log
 
 app.listen(port, () =>
   console.log(`Server started to run at the port ${port}`)
