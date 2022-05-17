@@ -35,7 +35,7 @@ exports.contact = async (req, res) => {
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
     return res.json({ msg: "email sent" });
   } catch (error) {
-    console.log(error);
+    console.log("the error is", error);
     return res.json({ msg: "email not sent" });
   }
 };
